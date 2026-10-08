@@ -3,6 +3,7 @@ import telebot
 # Замените ТОКЕН внутри кавычек на ваш секретный ключ от @BotFather
 TOKEN = ' 8820568834:AAFboucjaAMK52bPph3acetYcxO3Jkyd0Js '
 bot = telebot.TeleBot(TOKEN)
+TOKEN = '8820568834:AAFBoucjaAMK52bPph3acetYcxO3Jkyd8Js'
 
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
