@@ -3,7 +3,7 @@ from telebot import types
 
 # ⚠️ ВНИМАНИЕ: Для безопасности на GitHub токен скрыт!
 # При запуске на компьютере вставьте ваш секретный ключ от @BotFather внутрь кавычек ниже.
-TOKEN = 'ВАШ_СЕКРЕТНЫЙ_ТОКЕН_ИЗ_BOTFATHER'
+TOKEN = ' '
 bot = telebot.TeleBot(TOKEN)
 
 # Главное меню бота
