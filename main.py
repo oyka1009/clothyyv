@@ -72,7 +72,7 @@ def handle_text(message):
         bot.send_message(message.chat.id, "Выбери тип одежды, который ты ищешь:", reply_markup=get_clothing_keyboard())
 
     # =========================================================================
-    #                    ИНТЕГРАЦИЯ ТВОЕЙ БАЗЫ ДАННЫХ И ССЫЛОК
+    #             ПОЛНАЯ КУРИРОВАННАЯ БАЗА ССЫЛОК ОТ ОБЕИХ УЧЕНИЦ
     # =========================================================================
 
     elif message.text == "👕 Tops & T-shirts":
@@ -87,20 +87,26 @@ def handle_text(message):
                     "🛍 *Ozon Вариант 3:* Полосатый хлопковый лонгслив\n"
                     "🔗 [Купить на Ozon](https://ozon.uz)\n\n"
                     "-----------------------------------\n"
-                    "👕 **Чёрно-белая футболка-поло в полоску**\n"
-                    "🛍 *Ozon Альтернатива:* Стильное поло в полоску Y2K Grunge\n"
-                    "🔗 [Купить на Ozon](https://ozon.uz)"
+                    "👕 **Новинки от Софии: Трендовые футболки и блузы**\n"
+                    "🛍 *Ozon Полосатая блуза:* Приталенная рубашка ANGELS ASYLUM\n"
+                    "🔗 [Купить на Ozon](https://ozon.uz/t/yebSYFB)\n"
+                    "🛍 *Ozon Повседневная:* Рубашка Befree с коротким рукавом в клетку\n"
+                    "💰 Цена: 301 481 сум\n"
+                    "🔗 [Купить на Ozon](https://ozon.uz/t/1fnyHM0)\n"
+                    "🛍 *Ozon Мультяшная:* Футболка с принтом Paul Frank (худи с обезьянкой)\n"
+                    "💰 Цена: 208 986 сум\n"
+                    "🔗 [Купить на Ozon](https://ozon.uz/t/9oLUZEo)"
                 )
                 bot.send_photo(message.chat.id, photo, caption=text, parse_mode='Markdown')
         except FileNotFoundError:
-            bot.send_message(message.chat.id, "⚠️ Ошибка: Файл 'longsleeve.jpg' не найден в папке бота на компьютере!")
+            bot.send_message(message.chat.id, "⚠️ Ошибка: Файл 'longsleeve.jpg' не найден в папке бота!")
 
     elif message.text == "👖 Jeans & Trousers":
         try:
             with open('pants.jpg', 'rb') as photo:
                 text = (
                     "👖 **Широкие серые спортивные штаны с лампасами**\n\n"
-                    "🛍 *Uzum Вариант 1:* Свободные серые штаны-джоггеры\n"
+                    "🛍 *Uzum Вариант 1:* Свободные серыы штаны-джоггеры\n"
                     "🔗 [Купить на Uzum Market](https://uzum.uz)\n"
                     "🛍 *Uzum Вариант 2:* Повседневные оверсайз Baggy Y2K джоггеры\n"
                     "🔗 [Купить на Uzum Market](https://uzum.uz)\n"
@@ -119,7 +125,10 @@ def handle_text(message):
                     "🛍 *Uzum Вариант 1:* Хлопковое платье весна-лето с принтом\n"
                     "🔗 [Купить на Uzum Market](https://uzum.uz)\n"
                     "🛍 *Uzum Вариант 2:* Нарядное хлопковое платье с отложным воротником\n"
-                    "🔗 [Купить на Uzum Market](https://uzum.uz)"
+                    "🔗 [Купить на Uzum Market](https://uzum.uz)\n\n"
+                    "-----------------------------------\n"
+                    "🛍 *Софиюша Выбор:* Нарядное платье для девочек в нежном стиле\n"
+                    "🔗 [Купить на Ozon](https://ozon.uz/t/OyxBIBk)"
                 )
                 bot.send_photo(message.chat.id, photo, caption=text, parse_mode='Markdown')
         except FileNotFoundError:
@@ -133,7 +142,14 @@ def handle_text(message):
                     "🛍 *Uzum Вариант 1:* Короткое демисезонное пальто оверсайз с поясом\n"
                     "🔗 [Купить на Uzum Market](https://uzum.uz)\n"
                     "🛍 *Uzum Вариант 2:* Женское укороченное пальто с воротником-стойкой\n"
-                    "🔗 [Купить на Uzum Market](https://uzum.uz)"
+                    "🔗 [Купить на Uzum Market](https://uzum.uz)\n\n"
+                    "-----------------------------------\n"
+                    "🧥 **Новинки от Софии: Пиджаки и верхняя одежда**\n"
+                    "🛍 *Ozon Школьный:* Темно-синий хлопковый пиджак FAY для девочек\n"
+                    "💰 Цена: 445 610 сум\n"
+                    "🔗 [Купить на Ozon](https://ozon.uz/t/l1MOaPp)\n"
+                    "🛍 *Ozon Альтернатива:* Элегантный укороченный блейзер\n"
+                    "🔗 [Купить на Ozon](https://ozon.uz/t/7G4M4F9)"
                 )
                 bot.send_photo(message.chat.id, photo, caption=text, parse_mode='Markdown')
         except FileNotFoundError:
@@ -143,35 +159,18 @@ def handle_text(message):
         try:
             with open('cardigan.jpg', 'rb') as photo:
                 text = (
-                    "🧶 **Серый вязаный кардиган и базовый лонгслив**\n\n"
+                    "🧶 **Серый вязаный кардиган и теплые кофты**\n\n"
                     "🛍 *Uzum Вариант 1:* Женский вязаный кардиган на пуговицах\n"
                     "🔗 [Купить на Uzum Market](https://uzum.uz)\n"
                     "🛍 *Uzum Вариант 2:* Однотонный лонгслив на пуговицах с длинным рукавом\n"
                     "🔗 [Купить на Uzum Market](https://uzum.uz)\n"
                     "🛍 *Ozon Вариант 3:* Мягкий укороченный кардиган корейского стиля\n"
-                    "🔗 [Купить на Ozon](https://ozon.uz)"
-                )
-                bot.send_photo(message.chat.id, photo, caption=text, parse_mode='Markdown')
-        except FileNotFoundError:
-            bot.send_message(message.chat.id, "⚠️ Ошибка: Файл 'cardigan.jpg' не найден в папке бота!")
-
-    elif message.text == "💍 Accessories":
-        try:
-            with open('obodok.jpg', 'rb') as photo:
-                text = (
-                    "💍 **Трендовые текстильные ободки для волос**\n\n"
-                    "🛍 *Uzum Вариант 1:* Широкий мягкий ободок из ткани\n"
-                    "🔗 [Купить на Uzum Market](https://uzum.uz)\n"
-                    "🛍 *Uzum Вариант 2:* Дизайнерский текстильный фэшн-обруч\n"
-                    "🔗 [Купить на Uzum Market](https://uzum.uz)\n"
-                    "🛍 *Ozon Вариант 3:* Голубой тканевый ободок с цветочным принтом\n"
-                    "🔗 [Купить на Ozon](https://ozon.uz)\n"
-                    "🛸 *Ozon Запасной:* [Объемный голубой ободок](https://ozon.uz)\n\n"
+                    "🔗 [Купить на Ozon](https://ozon.uz)\n\n"
                     "-----------------------------------\n"
-                    "🦀 **Стильные заколки-крабики для волос**\n"
-                    "🛍 *Uzum Вариант 1:* Красивая и прочная женская заколка\n"
-                    "🔗 [Купить на Uzum Market](https://uzum.uz)\n"
-                    "🛍 *Uzum Вариант 2:* Набор заколки-краба 'Морская симфония' (5 шт)\n"
-                    "🔗 [Купить на Uzum Market](https://uzum.uz)\n"
-                    "🛍 *Ozon Вариант 3:* Переливающийся краб в форме морских жителей\n"
-                    "🔗 [Купить на Ozon](https://ozon.uz)\n"
+                    "🧶 **Новинки от Софии: Стильные худи и свитшоты**\n"
+                    "🛍 *Ozon Уличный стиль:* Толстовка Befree на молнии в полоску с капюшоном\n"
+                    "💰 Цена: 460 513 сум\n"
+                    "🔗 [Купить на Ozon](https://ozon.uz/t/qtXFjc8)\n"
+                    "🛍 *Ozon Базовый:* Мужской/Унисекс серый меланж свитшот без начеса\n"
+                    "💰 Цена: 296 476 сум\n"
+                    "🔗 [Купить на Ozon](https://ozon.uz/t/OyxBhFW)\n"
